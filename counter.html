@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Click Counter — Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <h1>Click Counter</h1>
+    <p>How many times each tab on the home page has been clicked (stored in
+       localStorage, shared across tabs/windows of this same site - leave
+       this page open in one tab and click around in another to watch it
+       update live).</p>
+
+    <table class="counter-table" data-testid="counter-table">
+      <thead>
+        <tr><th>Tab</th><th>Opens via</th><th>Count</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tab 1</td>
+          <td>Same-tab redirect</td>
+          <td id="redirectCount" data-testid="redirect-count">0</td>
+        </tr>
+        <tr>
+          <td>Tab 2</td>
+          <td>New tab</td>
+          <td id="newTabCount" data-testid="newtab-count">0</td>
+        </tr>
+        <tr>
+          <td>Tab 3</td>
+          <td>New window</td>
+          <td id="newWindowCount" data-testid="newwindow-count">0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="button" id="resetCounters" class="reset-btn" data-testid="reset-counters-button">
+      Reset counters (demo helper)
+    </button>
+    <br>
+    <a href="index.html" class="back-link" data-testid="back-link">&larr; Back to home</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
